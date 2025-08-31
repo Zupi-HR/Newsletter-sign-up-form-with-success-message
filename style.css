@@ -1,0 +1,179 @@
+/*
+  A common CSS reset to provide a clean slate and consistent base for styling.
+*/
+
+/*
+  1. Use a more intuitive box-sizing model on all elements.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin and padding on all elements.
+     This is a bit aggressive but ensures a clean slate.
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application.
+*/
+html,
+body {
+  height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height.
+  5. Improve text rendering.
+  6. Set a sensible default font.
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* For Firefox on macOS */
+  font-family: sans-serif;
+}
+
+/*
+  7. Improve media defaults.
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  8. Remove built-in form typography styles.
+     Buttons, inputs, etc., will now inherit font styles from their parent.
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  9. Avoid text overflows.
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  10. Create a root stacking context for common app root elements.
+      This prevents z-index issues with third-party components.
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+img {
+  width: 100%;
+}
+
+.signup-card__content {
+  padding: 2rem;
+}
+
+ul {
+  padding-inline-start: 1rem;
+}
+
+/* style.css */
+
+:root {
+  /*
+  ========================================
+  GLOBAL VARIABLES / DESIGN TOKENS
+  ========================================
+  */
+
+  /* ------------------- */
+  /* COLORS              */
+  /* ------------------- */
+
+  /* Primary */
+  --clr-primary-red: hsl(4, 100%, 67%);
+  /* #FF6155 */
+  --clr-gradient-1: hsl(346, 100%, 66%);
+  /* #FF527B */
+  --clr-gradient-2: hsl(15, 100%, 61%);
+  /* #FF6A3A */
+
+  /* Neutral */
+  --clr-neutral-blue-800: hsl(234, 29%, 20%);
+  /* #242742 */
+  --clr-neutral-blue-700: hsl(235, 18%, 26%);
+  /* #36384D */
+  --clr-neutral-grey: hsl(0, 0%, 58%);
+  /* #949494 */
+  --clr-neutral-white: hsl(0, 100%, 100%);
+  /* #FFFFFF */
+
+
+  /* ------------------- */
+  /* TYPOGRAPHY          */
+  /* ------------------- */
+
+  /* Font Family */
+  --ff-primary: 'Roboto', sans-serif;
+
+  /* Font Weights */
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  /* Font Sizes (using rem for scalability and accessibility) */
+  --fs-heading: 2.5rem;
+  /* 40px */
+  --fs-heading-desktop: 3.5rem;
+  /* 56px */
+  --fs-body: 1.0rem;
+  /* 16px */
+  --fs-small: 0.75rem;
+  /* 12px */
+
+
+  /* ------------------- */
+  /* SPACING             */
+  /* ------------------- */
+
+  /* Using a rem-based spacing scale for consistency and accessibility */
+  --spacing-100: 0.5rem;
+  /* 8px */
+  --spacing-200: 1.0rem;
+  /* 16px */
+  --spacing-300: 1.5rem;
+  /* 24px */
+  --spacing-400: 2.0rem;
+  /* 32px */
+  --spacing-500: 2.5rem;
+  /* 40px */
+  --spacing-600: 3.0rem;
+  /* 48px */
+  --spacing-800: 4.0rem;
+  /* 64px */
+  --spacing-900: 4.5rem;
+  /* 72px */
+  --spacing-1300: 6.5rem;
+  /* 104px */
+}
