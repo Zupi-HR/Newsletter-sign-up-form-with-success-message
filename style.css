@@ -168,18 +168,11 @@ h6 {
   /* 104px */
 }
 
-/* Utility */
-.hidden {
-  display: none;
-}
 
 body {
   font-family: var(--ff-primary);
   font-size: var(--fs-body);
-  background-color: var(--clr-neutral-blue-700);
-  min-height: 100%;
-  display: grid;
-  place-content: center;
+  background-color: var(--clr-neutral-white);
 }
 
 
@@ -194,6 +187,7 @@ body {
 
 .signup-card__content {
   padding: var(--spacing-400);
+  padding-block-end: 0;
 }
 
 .signup-card__content h1 {
@@ -285,11 +279,16 @@ button:focus-visible {
 }
 
 @media (min-width: 768px) {
+  body {
+    place-content: center;
+    background-color: var(--clr-neutral-blue-700);
+  }
 
   .signup-card {
     padding: var(--spacing-400);
     border-radius: 36px;
-    max-width: 928px;
+    max-width: 736px;
+    margin-inline: auto;
   }
 
   .signup-card__content {
@@ -299,11 +298,14 @@ button:focus-visible {
 }
 
 @media (min-width: 1025px) {
+
   .signup-card {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     gap: var(--spacing-800);
+    min-height: 0;
+    max-width: 904px;
   }
 
   .signup-card__content {
@@ -313,4 +315,59 @@ button:focus-visible {
   .signup-card__content h1 {
     font-size: var(--fs-heading-desktop);
   }
+}
+
+.success-card {
+  background-color: var(--clr-neutral-white);
+  padding: var(--spacing-1300) var(--spacing-300) var(--spacing-500);
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+
+.success-card p {
+  margin-bottom: auto;
+}
+
+.success-card h1 {
+  font-size: var(--fs-heading);
+  line-height: 1;
+  margin-block-end: var(--spacing-400);
+}
+
+.success-card h1::before {
+  content: "";
+  background-image: url(assets/images/icon-success.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin-block-end: var(--spacing-400);
+}
+
+
+@media (min-width: 768px) {
+  .success-card {
+    display: grid;
+    min-height: 0;
+    gap: var(--spacing-400);
+    padding: var(--spacing-600) var(--spacing-800);
+    border-radius: 36px;
+    max-width: 504px;
+  }
+
+  .success-card p {
+    margin-bottom: 0;
+  }
+
+  .success-card h1 {
+    margin-block-end: 0;
+  }
+}
+
+/* Utility */
+.hidden {
+  display: none;
 }
