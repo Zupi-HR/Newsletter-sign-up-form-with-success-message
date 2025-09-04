@@ -349,6 +349,11 @@ button:focus-visible {
 
 
 @media (min-width: 768px) {
+  body {
+    display: grid;
+    place-content: center;
+  }
+
   .success-card {
     display: grid;
     min-height: 0;
